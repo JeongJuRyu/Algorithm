@@ -4,8 +4,8 @@ using namespace std;
 int main() {
 	int E, S, M;
 	cin >> E >> S >> M;
-	int e = 1, s = 1, m = 1;
-	for (int i = 1;; i++) {
+	int e = 1, s = 1, m = 1, i = 1;
+	while(1) {
 		if (e == E && s == S && m == M) {
 			cout << i << '\n';
 			break;
@@ -22,6 +22,7 @@ int main() {
 		if (m == 20) {
 			m = 1;
 		}
+		i++;
 	}
 	return 0;
 }
