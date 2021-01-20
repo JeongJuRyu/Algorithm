@@ -1,59 +1,37 @@
-#include <iostream>
-#include <vector>
-#include <algorithm>
 #include <string>
+#include <vector>
+bool arr[9999999];
 using namespace std;
-int check(vector<string> &a) {
-	int n = a.size();
-	int ans = 1;
-	for (int i = 0; i < n; i++) {
-		int cnt = 1;
-		for (int j = 1; j < n; j++) {
-			if (a[i][j] == a[i][j - 1]) {
-				cnt += 1;
-			}
-			else {
-				cnt = 1;
-			}
-			if (ans < cnt) ans = cnt;
-		}
-		cnt = 1;
-		for (int j = 1; j < n; j++) {
-			if (a[j][i] == a[j - 1][i]) {
-				cnt += 1;
-			}
-			else {
-				cnt = 1;
-			}
-			if (ans < cnt) ans = cnt;
-		}
-	}
-	return ans;
+int answer, n;
+bool dfs(vector<int>& v, int num, int now_digit)){
+if (v.empty()) {
+	if (!arr[num]) answer++;
 }
-int main() {
-	int n;
-	cin >> n;
-	vector<string> a(n);
-	for (int i = 0; i < n; i++) {
-		cin >> a[i];
+for (int i = 0; i<v.size(); i++) {
+	int temp_num = v.push_back();
+	dfs(v, num += num * now_digit, now_digit * 10);
+	v.push(temp_num);
+}
+}
+int solution(string numbers) {
+	vector<int> v;
+	for (int i = 0; i < numbers.length(); i++) {
+		v.push_back(numbers[i] - '0');
 	}
-	int ans = 0;
-	for (int i = 0; i < n; i++) {
-		for (int j = 0; j < n; j++) {
-			if (j + 1 < n) {
-				swap(a[i][j], a[i][j + 1]);
-				int temp = check(a);
-				if (ans < temp) ans = temp;
-				swap(a[i][j], a[i][j + 1]);
-			}
-			if (i + 1 < n) {
-				swap(a[i][j], a[i + 1][j]);
-				int temp = check(a);
-				if (ans < temp) ans = temp;
-				swap(a[i][j], a[i + 1][j]);
+	n = v.size();
+	for (int i = 1; i*i <= 9999999; i++) {
+		if (n == 1) continue;
+		if (!arr[i]) {
+			for (int j = i * i; j <= n; j += i) {
+				arr[j] = true;
 			}
 		}
 	}
-	cout << ans << '\n';
-	return 0;
+	dfs(v, 0, 1)
+		int answer = 0;
+	return answer;
+}
+
+int main() {
+	cout << solution('1234') << '\n';
 }
