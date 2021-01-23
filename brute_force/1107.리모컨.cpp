@@ -25,10 +25,10 @@ int main() {
 	cin >> n;
 	int m;
 	cin >> m;
-	for (int i = 0; i < m; i++) { // 고장난 버튼에 true
+	for (int i = 0; i < m; i++) { 
 		int x;
 		cin >> x;
-		broken[x] = true;
+		broken[x] = true; // 고장난 버튼에 true
 	}
 	int ans = n - 100; // 문제를 쉽게 풀기위해 100을 뺀다
 	if (ans < 0) ans = -ans; // 부호 처리, 이때 ans의 값은 ++ 혹은 --만 사용해서 갔을 때의 버튼을 누른 횟수이다.
@@ -38,11 +38,11 @@ int main() {
 		int c = i;
 		int len = possible(c); //가장 가까이 이동할 수 있는 len 값 얻어온다
 		if (len > 0) {
-			int press = c - n; // 눌러야 하는 ++ or -- 갯수
+			int press = c - n; // 눌러야 하는 + or - 갯수
 			if (press < 0) {
 				press = -press;
 			}
-			if (ans > len + press) ans = len + press; // 지속적인 최신화
+			if (ans > len + press) ans = len + press; 
 		}
 	}
 	printf("%d\n", ans);
