@@ -1,8 +1,10 @@
 /* 모든 경우의 수를 다 고려한다 */
 
 #include <iostream>
+
 using namespace std;
 int a[500][500];
+
 int main() {
 	int n, m;
 	cin >> n >> m;
