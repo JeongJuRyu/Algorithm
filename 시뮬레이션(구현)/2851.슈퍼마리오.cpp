@@ -1,3 +1,4 @@
+/*단순 시뮬레이션 문제*/
 #include <iostream>
 #include <vector>
 #include <algorithm>
