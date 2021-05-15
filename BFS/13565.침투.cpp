@@ -1,4 +1,7 @@
-/*visited의 초기화 필요 X*/
+/*
+visited의 초기화 필요 X
+
+*/
 
 #include <iostream>
 #include <queue>
