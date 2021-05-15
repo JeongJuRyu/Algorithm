@@ -1,6 +1,6 @@
 /*
 visited의 초기화 필요 X
-
+방문 완료 시 true 대입 타이밍 숙지하기
 */
 
 #include <iostream>
