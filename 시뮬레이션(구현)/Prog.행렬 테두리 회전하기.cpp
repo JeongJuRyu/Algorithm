@@ -1,4 +1,5 @@
-// vector를 2차원 배열로 선언할 때, v
+// vector를 2차원 배열로 선언할 때
+// vector를 복사할 때 사용법 잘 익히기
 
 #include <string>
 #include <vector>
