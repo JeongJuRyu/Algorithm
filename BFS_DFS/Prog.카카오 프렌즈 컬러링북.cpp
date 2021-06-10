@@ -1,4 +1,6 @@
-// Àü¿ª º¯¼ö solution ³»¿¡¼­ ÃÊ±âÈ­ ÇØ ÁÖ¾î¾ß Åë°úÇÔ
+https://programmers.co.kr/learn/courses/30/lessons/1829
+
+// ì „ì—­ ë³€ìˆ˜ solution ë‚´ì—ì„œ ì´ˆê¸°í™” í•´ ì£¼ì–´ì•¼ í†µê³¼í•¨
 #include <vector>
 #include <queue>
 #include <algorithm>
@@ -35,10 +37,10 @@ void BFS(int i, int j) {
 			q.push(make_pair(nx, ny));
 		}
 	}
-	//max_size ¿©ºÎ °Ë»ç
+	//max_size ì—¬ë¶€ ê²€ì‚¬
 	max_size_of_one_area = max(max_size_of_one_area, temp_size);
 }
-// Àü¿ª º¯¼ö¸¦ Á¤ÀÇÇÒ °æ¿ì ÇÔ¼ö ³»¿¡ ÃÊ±âÈ­ ÄÚµå¸¦ ²À ÀÛ¼ºÇØÁÖ¼¼¿ä.
+// ì „ì—­ ë³€ìˆ˜ë¥¼ ì •ì˜í•  ê²½ìš° í•¨ìˆ˜ ë‚´ì— ì´ˆê¸°í™” ì½”ë“œë¥¼ ê¼­ ì‘ì„±í•´ì£¼ì„¸ìš”.
 vector<int> solution(int _m, int _n, vector<vector<int>> picture) {
 	number_of_area = 0;
 	max_size_of_one_area = 0;
