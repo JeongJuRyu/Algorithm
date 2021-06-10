@@ -1,5 +1,9 @@
 https://programmers.co.kr/learn/courses/30/lessons/49189
 
+/*queue를 pair int 자료형으로 해서, 2번째 인자를 distance로 하는 방법도 있다.하지만
+메모리와 시간이 많이 나와서 이 방법 사용
+*/
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -34,7 +38,7 @@ int solution(int n, vector<vector<int>> edge) {
 		int startNode = q.front();
 		q.pop();
 
-		// startNode�� ����� ���� �湮
+		// startNode¿Í ¿¬°áµÈ ³ëµåµé ¹æ¹®
 		for (int i = 0; i < conInfo[startNode].size(); i++) {
 			int endNode = conInfo[startNode][i];
 			if (!visited[endNode]) {
