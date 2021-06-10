@@ -1,3 +1,5 @@
+https://programmers.co.kr/learn/courses/30/lessons/43163
+
 #include <string>
 #include <vector>
 #include <algorithm>
@@ -20,7 +22,7 @@ void dfs(vector<string>& words, int now, string new_target, int index) {
 		return;
 	}
 	for (int i = 0; i < words.size(); i++) {
-		if (!check(words[i], new_target) || visited[i]) continue; //2 ±ÛÀÚ ÀÌ»ó ´Ù¸¥ °æ¿ì continue;
+		if (!check(words[i], new_target) || visited[i]) continue; //2 Â±Ã›Ã€Ãš Ã€ÃŒÂ»Ã³ Â´Ã™Â¸Â¥ Â°Ã¦Â¿Ã¬ continue;
 		visited[i] = true;
 		dfs(words, now + 1, words[i], i);
 		visited[i] = false;
