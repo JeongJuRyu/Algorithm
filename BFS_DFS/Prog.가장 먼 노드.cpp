@@ -1,7 +1,7 @@
 https://programmers.co.kr/learn/courses/30/lessons/49189
 
 /*queue를 pair int 자료형으로 해서, 2번째 인자를 distance로 하는 방법도 있다.하지만
-메모리와 시간이 많이 나와서 이 방법 사용
+메모리와 시간이 많이 나와서 distance 1차원 배열을 사용하는 방법을 사용
 */
 
 #include <iostream>
