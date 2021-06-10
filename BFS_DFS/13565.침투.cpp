@@ -1,8 +1,10 @@
+https://www.acmicpc.net/problem/13565
+
 /*
-´Ü¼ø BFS¹®Á¦
-visitedÀÇ ÃÊ±âÈ­ ÇÊ¿ä X
-¹æ¹® ¿Ï·á ½Ã true ´ëÀÔ Å¸ÀÌ¹Ö ¼÷ÁöÇÏ±â
-flag »ç¿ë
+ë‹¨ìˆœ BFSë¬¸ì œ
+visitedì˜ ì´ˆê¸°í™” í•„ìš” X
+ë°©ë¬¸ ì™„ë£Œ ì‹œ true ëŒ€ì… íƒ€ì´ë° ìˆ™ì§€í•˜ê¸°
+flag ì‚¬ìš©
 */
 
 #include <iostream>
